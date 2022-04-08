@@ -1,0 +1,27 @@
+/* Style the navigation menu */
+.menu {
+    width: 100%;
+    background-color: rgb(235, 217, 217);
+    overflow: auto;
+  }
+
+
+  /* Navigation links */
+.menu a {
+    float: left;
+    padding: 12px; /* separacion del texto con el borde interior del elemento */
+    color: black;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none; /* con "none" le saco el subrayado */
+    font-size: 20px;
+    width: 31.55%; /* lo que ocupa de ancho en la pantalla */
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+
+  /* Add a background color on mouse-over */
+.menu a:hover {
+    background-color: rgb(119, 20, 41);
+  }
