@@ -1,11 +1,15 @@
-#grupoA, th, td{
+#grupo, th, td{
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-#grupoA {
+#grupo {
     float: left;
     width: 30%;
+}
+
+.espacio {
+    float: left;
 }
 
 .miembro {
@@ -13,7 +17,7 @@
     text-transform: uppercase;
     padding-top: 5px;
     padding-bottom: 5px;
-    vertical-align:text-bottom;
+    vertical-align: baseline;
 }
 
 .datos {
