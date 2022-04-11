@@ -1,0 +1,26 @@
+#grupoA, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#grupoA {
+    float: left;
+    width: 30%;
+}
+
+.miembro {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align:text-bottom;
+}
+
+.datos {
+    text-align: right;
+}
+/*
+.banderita {
+    padding: auto;
+}
+*/
