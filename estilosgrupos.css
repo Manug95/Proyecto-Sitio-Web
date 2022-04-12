@@ -1,28 +1,58 @@
+/*
+alinear banderas con los nombres de los paises
+arreglar el p del texto de descripcion
+
+*/
+
+
+/* #grupo es el id de las tablas de los grupos */
 #grupo, th, td{
     border: 1px solid black;
     border-collapse: collapse;
+    width: 6.25%;
 }
 
 #grupo {
     float: left;
-    width: 30%;
+    width: 49.7%;
+    background-color: rgb(170, 31, 61);
+    color: rgb(235, 217, 217);
 }
 
+caption {
+    color: black;
+    font-weight: bold;
+}
+
+/* espacio es la clase de los p para separar las tablas */
 .espacio {
     float: left;
 }
 
+/* descripciones es la clase del p de las descripciones de los paises */
+.descripciones {
+    float: none;
+}
+
+/* miembro es la clase de los nombres de los paises en las tablas */
 .miembro {
     font-weight: bold;
     text-transform: uppercase;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     vertical-align: baseline;
+    width: 50%;
 }
 
+/* datos es la clase de los datos de las tablas */
 .datos {
     text-align: right;
 }
+
+/* div de las tablas de grupos 
+div {
+    margin-bottom: auto;
+}*/
 /*
 .banderita {
     padding: auto;
