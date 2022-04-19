@@ -20,8 +20,12 @@
     text-transform: uppercase;
   }
 
+.menu a.active {
+  background-color: rgb(119, 20, 41);
+}
+
 
   /* Add a background color on mouse-over */
 .menu a:hover {
-    background-color: rgb(119, 20, 41);
+    background-color: rgb(41, 20, 119);
   }
