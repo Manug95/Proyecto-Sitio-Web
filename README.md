@@ -1,2 +1,2 @@
 # Proyecto-Sitio-Web
-pagina web del mundial de qatar 2022
+sitio web del mundial de qatar 2022
