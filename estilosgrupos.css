@@ -6,16 +6,18 @@ arreglar el p del texto de descripcion
 
 
 /* #grupo es el id de las tablas de los grupos */
-#grupo, th, td{
+.grupo, th, td{
     border: 1px solid black;
     border-collapse: collapse;
     width: 6.25%;
+    vertical-align: middle;
 }
 
-#grupo {
+.grupo {
     float: left;
     width: 49.7%;
-    background-color: rgb(170, 31, 61);
+    /*background-color: rgb(170, 31, 61);*/
+    background-color: rgb(155, 60, 80);;
     color: rgb(235, 217, 217);
 }
 
@@ -53,8 +55,12 @@ caption {
 div {
     margin-bottom: auto;
 }*/
-/*
+
 .banderita {
-    padding: auto;
+    vertical-align: middle;
 }
-*/
+
+a {
+    text-decoration: none;
+    color: black;
+}
