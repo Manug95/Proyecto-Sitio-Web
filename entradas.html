@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Qatar 2022 - Entradas</title>
+    <link href="menustyles.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">¡BIENVENIDOS A QATAR 2022!</h1>
+        <!--INICIO DEL MENU-->
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="participantes.html">Participantes</a>
+            <a class="active" href="">Entradas</a>
+        </div>
+        <!--FIN DEL MENU-->
+    </header>
+    <br>
+    <div>
+        <form action="">
+            <label for="seleccion">Seleccione un Pais: </label>
+            <select name="seleccion" id="seleccion">
+                <!--desaparecer a saleccione cuando se seleecione alguna otra opcion-->
+                <option value="" selected disabled>Seleccione</option>
+                <option value="ger">Alemania</option>
+                <option value="ksa">Arabia Saudita</option>
+                <option value="arg">Argentina</option>
+                <option value="bel">Belgica</option>
+                <option value="bra">Brasil</option>
+                <option value="cam">Camerun</option>
+                <option value="can">Canadá</option>
+                <option value="kor">Corea del Sur</option>
+                <option value="cro">Croacia</option>
+                <option value="den">Dinamarca</option>
+                <option value="ecu">Ecuador</option>
+                <option value="usa">EE.UU</option>
+                <option value="esp">España</option>
+                <option value="fra">Francia</option>
+                <option value="gha">Ghana</option>
+                <option value="eng">Inglaterra</option>
+                <option value="irn">Irán</option>
+                <option value="jpn">Japón</option>
+                <option value="mar">Marruecos</option>
+                <option value="mex">México</option>
+                <option value="ned">Paises Bajos</option>
+                <option value="pol">Polonia</option>
+                <option value="por">Portugal</option>
+                <option value="qat">Qatar</option>
+                <option value="sen">Senegal</option>
+                <option value="srb">Serbia</option>
+                <option value="sui">Suiza</option>
+                <option value="tun">Tunez</option>
+                <option value="uru">Uruguay</option>
+            </select>
+
+            <div id="partidos-ger">
+                <p>Elegir la Entrada para el/los Partidos de Alemania</p>
+                <input type="checkbox" id="ger-vs-esp" name="ger-vs-esp" value="ger-vs-esp">
+                <label for="ger-vs-esp">España vs Alemania</label><br>
+                <input type="checkbox" id="ger-vs-jpn" name="ger-vs-jpn" value="ger-vs-jpn">
+                <label for="ger-vs-jpn">Alemania vs Japón</label><br>
+                <input type="checkbox" id="rep3-vs-ger" name="rep3-vs-ger" value="rep3-vs-ger">
+                <label for="rep3-vs-ger">Repechaje 3 vs Alemania</label><br>
+            </div>
+            <div id="partidos-ksa">
+                <p>Elegir la Entrada para el/los Partidos de Arabia Saudita</p>
+                <input type="checkbox" id="ksa-vs-arg" name="ksa-vs-arg" value="ksa-vs-arg">
+                <label for="ksa-vs-arg">Argentina vs Arabia Saudita</label><br>
+                <input type="checkbox" id="ksa-vs-pol" name="ksa-vs-pol" value="ksa-vs-pol">
+                <label for="ksa-vs-pol">Arabia Saudita vs Polonia</label><br>
+                <input type="checkbox" id="ksa-vs-mex" name="ksa-vs-mex" value="ksa-vs-mex">
+                <label for="ksa-vs-mex">Mexico vs Arabia Saudita</label><br>
+            </div>
+            <div id="partidos-ksa">
+                <p>Elegir la Entrada para el/los Partidos de Argentina</p>
+                <input type="checkbox" id="arg-vs-ksa" name="arg-vs-ksa" value="arg-vs-ksa">
+                <label for="arg-vs-ksa">Argentina vs Arabia Saudita</label><br>
+                <input type="checkbox" id="arg-vs-mex" name="arg-vs-mex" value="arg-vs-mex">
+                <label for="arg-vs-mex">Mexico vs Argentina</label><br>
+                <input type="checkbox" id="arg-vs-pol" name="arg-vs-pol" value="arg-vs-pol">
+                <label for="arg-vs-pol">Argentina vs Polonia</label><br>
+            </div>
+
+            <hr><!--borrar desp-->
+            <!--agregar iconos de las tarjetas aceptadas-->
+            <p>Medio de Pago</p>
+            <input type="radio" id="cre" name="tipo-targeta" value="Credito">
+            <label for="cre">Credito</label><br>
+            <input type="radio" id="deb" name="tipo-targeta" value="Debito">
+            <label for="deb">Debito</label><br>
+
+            <label for="nombre-tarjeta">Nombre que Aparece en su Tarjeta: </label>
+            <input type="text" id="nombre-tarjera" name="nombre-tarjeta" placeholder="Juan Pérez" required><br>
+            
+            <label for="num-tarjeta">Nro Tarjeta:</label>
+            <input type="text" id="num-tarjeta" name="num-tarjeta" maxlength="19" pattern="1111-2222-3333-4444" placeholder="1111-2222-3333-4444" required><br>
+            
+            <label for="cvv">CVV: </label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" size="3" placeholder="111" required><br>
+            
+            <label for="vencimiento">Fecha de Vencimiento</label>
+            <input type="text" id="vencimiento" name="vencimiento" maxlength="5" size="5" placeholder="dd/mm" required><br>
+            
+            <label for="mail">Mail: </label>
+            <input type="email" id="mail" name="mail" placeholder="Juan_Perez@gmail.com" required><br>
+            
+            <input type="submit" value="Confirmar">
+        </form>
+        
+    </div>
+</body>
+
+</html>
