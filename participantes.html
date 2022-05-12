@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Qatar 2022 - Participantes</title>
+    <link rel="icon" type="image/x-icon" href="img/icono.jpg">
     <link rel="stylesheet" href="estilosgrupos.css">
     <link href="menustyles.css" rel="stylesheet">
+    <link href="generalstyles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a9de479e72.js" crossorigin="anonymous"></script>
     <style>
         .menu a{
             width: 31.53%;
         }
-        body {
-            background-color: aquamarine;
-        }
-        h1 {
+        h1, h2, h3 {
             text-align: center;
         }
         h3 {
@@ -31,19 +31,24 @@
 
 <body>
     <header>
-        <h1 style="text-align: center;">¡BIENVENIDOS A QATAR 2022!</h1>
-        <!--SECCION O APARTADO DONDE ESTA EL MENU-->
+        <h1>Copa Mundial de la FIFA Qatar 2020</h1>
+        <h2>¡BIENVENIDOS!</h2>
+        <!--MENU-->
         <div class="menu">
             <a href="index.html">Home</a>
             <a class="active" href="participantes.html">Participantes</a>
             <a href="entradas.html">Entradas</a>
         </div>
-        <!--FIN APARTADO DEL MENU-->
+        <!--FIN DEL MENU-->
     </header>
+
+    <!--Boton toTop-->
+    <button onclick="topFunction()" id="toTop" title="Ir Arriba"><i class="fa-solid fa-plane-up"></i></button>
 
     <h1>Grupos del Mundial</h1>
 
-    <div><!-- div tablas de grupos-->
+    <!-- div tablas de grupos-->
+    <div>
         <!--grupo A-->
         <table class="grupo">
             <caption>GRUPO A</caption>
@@ -103,7 +108,6 @@
                 <td class="datos">0</td>
             </tr>
         </table>
-        <!--<p class="espacio">&nbsp</p>-->
         <!--grupo B-->
         <table class="grupo" style="float: right;">
             <caption>GRUPO B</caption>
@@ -223,7 +227,6 @@
                 <td class="datos">0</td>
             </tr>
         </table>
-        <!--<p class="espacio">&nbsp</p>-->
         <!--grupo D-->
         <table class="grupo" style="float: right;">
             <caption>GRUPO D</caption>
@@ -343,7 +346,6 @@
                 <td class="datos">0</td>
             </tr>
         </table>
-        <!--<p class="espacio">&nbsp</p>-->
         <!--grupo F-->
         <table class="grupo" style="float: right;">
             <caption>GRUPO F</caption>
@@ -463,7 +465,6 @@
                 <td class="datos">0</td>
             </tr>
         </table>
-        <!--<p class="espacio">&nbsp</p>-->
         <!--grupo H-->
         <table class="grupo" style="float: right;">
             <caption>GRUPO H</caption>
@@ -697,6 +698,27 @@
         <hr>
     </div>
 
+    
+
 </body>
+
+<script>
+    var toTopButton = document.getElementById("toTop");
+    
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        toTopButton.style.display = "block";
+      } else {
+        toTopButton.style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+        document.body.scrollTop = 130;//para Safari
+        document.documentElement.scrollTop = 130;//Para Chrome, Firefox, IE y Opera
+    }
+</script>
 
 </html>

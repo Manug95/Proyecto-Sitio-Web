@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Qatar 2022 - Entradas</title>
+    <link rel="icon" type="image/x-icon" href="img/icono.jpg">
     <link href="menustyles.css" rel="stylesheet">
+    <link href="generalstyles.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1 style="text-align: center;">¡BIENVENIDOS A QATAR 2022!</h1>
-        <!--INICIO DEL MENU-->
+        <h1 style="text-align: center;">Copa Mundial de la FIFA Qatar 2020</h1>
+        <h2 style="text-align: center;">¡BIENVENIDOS!</h2>
+        <!--MENU-->
         <div class="menu">
             <a href="index.html">Home</a>
             <a href="participantes.html">Participantes</a>
@@ -56,33 +59,7 @@
                 <option value="uru">Uruguay</option>
             </select>
 
-            <div id="partidos-ger">
-                <p>Elegir la Entrada para el/los Partidos de Alemania</p>
-                <input type="checkbox" id="ger-vs-esp" name="ger-vs-esp" value="ger-vs-esp">
-                <label for="ger-vs-esp">España vs Alemania</label><br>
-                <input type="checkbox" id="ger-vs-jpn" name="ger-vs-jpn" value="ger-vs-jpn">
-                <label for="ger-vs-jpn">Alemania vs Japón</label><br>
-                <input type="checkbox" id="rep3-vs-ger" name="rep3-vs-ger" value="rep3-vs-ger">
-                <label for="rep3-vs-ger">Repechaje 3 vs Alemania</label><br>
-            </div>
-            <div id="partidos-ksa">
-                <p>Elegir la Entrada para el/los Partidos de Arabia Saudita</p>
-                <input type="checkbox" id="ksa-vs-arg" name="ksa-vs-arg" value="ksa-vs-arg">
-                <label for="ksa-vs-arg">Argentina vs Arabia Saudita</label><br>
-                <input type="checkbox" id="ksa-vs-pol" name="ksa-vs-pol" value="ksa-vs-pol">
-                <label for="ksa-vs-pol">Arabia Saudita vs Polonia</label><br>
-                <input type="checkbox" id="ksa-vs-mex" name="ksa-vs-mex" value="ksa-vs-mex">
-                <label for="ksa-vs-mex">Mexico vs Arabia Saudita</label><br>
-            </div>
-            <div id="partidos-ksa">
-                <p>Elegir la Entrada para el/los Partidos de Argentina</p>
-                <input type="checkbox" id="arg-vs-ksa" name="arg-vs-ksa" value="arg-vs-ksa">
-                <label for="arg-vs-ksa">Argentina vs Arabia Saudita</label><br>
-                <input type="checkbox" id="arg-vs-mex" name="arg-vs-mex" value="arg-vs-mex">
-                <label for="arg-vs-mex">Mexico vs Argentina</label><br>
-                <input type="checkbox" id="arg-vs-pol" name="arg-vs-pol" value="arg-vs-pol">
-                <label for="arg-vs-pol">Argentina vs Polonia</label><br>
-            </div>
+            
 
             <hr><!--borrar desp-->
             <!--agregar iconos de las tarjetas aceptadas-->
@@ -99,10 +76,10 @@
             <input type="text" id="num-tarjeta" name="num-tarjeta" maxlength="19" pattern="1111-2222-3333-4444" placeholder="1111-2222-3333-4444" required><br>
             
             <label for="cvv">CVV: </label>
-            <input type="text" id="cvv" name="cvv" maxlength="3" size="3" placeholder="111" required><br>
+            <input type="text" id="cvv" name="cvv" maxlength="3" size="1" placeholder="111" required><br>
             
             <label for="vencimiento">Fecha de Vencimiento</label>
-            <input type="text" id="vencimiento" name="vencimiento" maxlength="5" size="5" placeholder="dd/mm" required><br>
+            <input type="text" id="vencimiento" name="vencimiento" maxlength="5" size="2" placeholder="mm/aa" required><br>
             
             <label for="mail">Mail: </label>
             <input type="email" id="mail" name="mail" placeholder="Juan_Perez@gmail.com" required><br>
