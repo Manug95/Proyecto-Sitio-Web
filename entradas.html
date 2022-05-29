@@ -7,12 +7,13 @@
     <link rel="icon" type="image/x-icon" href="img/icono.jpg">
     <link href="css/menustyles.css" rel="stylesheet">
     <link href="css/generalstyles.css" rel="stylesheet">
-    <script src="codigos.js"></script>
+    <link rel="stylesheet" href="css/formulariostyles.css">
+    <script src="jsformu.js"></script>
 </head>
 
 <body>
     <header>
-        <h1 style="text-align: center;">Copa Mundial de la FIFA Qatar 2020</h1>
+        <h1 style="text-align: center;">Copa Mundial de la FIFA Qatar 2022</h1>
         <h2 style="text-align: center;">¡BIENVENIDOS!</h2>
         <!--MENU-->
         <div class="menu">
@@ -23,73 +24,92 @@
         <!--FIN DEL MENU-->
     </header>
     <br>
-    <div  style="display: block; float: left; width: 50%;">
+    <div id="div-izq">
         <form action="" id="formu" name="formu" onsubmit="return enviar()">
-            <label for="seleccion">Seleccione un Pais: </label>
-            <select name="seleccion" id="seleccion" onchange="mostrarPartidos()">
-                <!--desaparecer a saleccione cuando se seleecione alguna otra opcion-->
-                <option value="" selected disabled>Seleccione</option>
-                <option value="ger">Alemania</option>
-                <option value="ksa">Arabia Saudita</option>
-                <option value="arg">Argentina</option>
-                <option value="bel">Belgica</option>
-                <option value="bra">Brasil</option>
-                <option value="cam">Camerun</option>
-                <option value="can">Canadá</option>
-                <option value="kor">Corea del Sur</option>
-                <option value="cro">Croacia</option>
-                <option value="den">Dinamarca</option>
-                <option value="ecu">Ecuador</option>
-                <option value="usa">EE.UU</option>
-                <option value="esp">España</option>
-                <option value="fra">Francia</option>
-                <option value="gha">Ghana</option>
-                <option value="eng">Inglaterra</option>
-                <option value="irn">Irán</option>
-                <option value="jpn">Japón</option>
-                <option value="mar">Marruecos</option>
-                <option value="mex">México</option>
-                <option value="ned">Paises Bajos</option>
-                <option value="pol">Polonia</option>
-                <option value="por">Portugal</option>
-                <option value="qat">Qatar</option>
-                <option value="sen">Senegal</option>
-                <option value="srb">Serbia</option>
-                <option value="sui">Suiza</option>
-                <option value="tun">Tunez</option>
-                <option value="uru">Uruguay</option>
-            </select>
+            <div>
+                <label for="seleccion">Seleccione un Pais: </label>
+                <select name="seleccion" id="seleccion"  onchange="mostrarPartidos()">
+                    <!--desaparecer a saleccione cuando se seleecione alguna otra opcion-->
+                    <option value="" selected disabled>Seleccione</option>
+                    <option value="ger">Alemania</option>
+                    <option value="ksa">Arabia Saudita</option>
+                    <option value="arg">Argentina</option>
+                    <option value="bel">Belgica</option>
+                    <option value="bra">Brasil</option>
+                    <option value="cam">Camerun</option>
+                    <option value="can">Canadá</option>
+                    <option value="kor">Corea del Sur</option>
+                    <option value="cro">Croacia</option>
+                    <option value="den">Dinamarca</option>
+                    <option value="ecu">Ecuador</option>
+                    <option value="usa">EE.UU</option>
+                    <option value="esp">España</option>
+                    <option value="fra">Francia</option>
+                    <option value="gha">Ghana</option>
+                    <option value="eng">Inglaterra</option>
+                    <option value="irn">Irán</option>
+                    <option value="jpn">Japón</option>
+                    <option value="mar">Marruecos</option>
+                    <option value="mex">México</option>
+                    <option value="ned">Paises Bajos</option>
+                    <option value="pol">Polonia</option>
+                    <option value="por">Portugal</option>
+                    <option value="qat">Qatar</option>
+                    <option value="sen">Senegal</option>
+                    <option value="srb">Serbia</option>
+                    <option value="sui">Suiza</option>
+                    <option value="tun">Tunez</option>
+                    <option value="uru">Uruguay</option>
+                </select>
+            </div>
 
            
 
             <!--agregar iconos de las tarjetas aceptadas-->
             <p>Medio de Pago</p>
-            <input type="radio" id="cre" name="tipo-targeta" value="credito">
-            <label for="cre">Credito</label><br>
-            <input type="radio" id="deb" name="tipo-targeta" value="cebito">
-            <label for="deb">Debito</label><br>
-
-            <label for="nombre-tarjeta">Nombre que Aparece en su Tarjeta: </label>
-            <input type="text" id="nombre_tarjeta" name="nombre_tarjeta" placeholder="Juan Pérez"><br>
+            <div class="divs-inputs">
+                <input type="radio" id="cre" name="tipo-targeta" value="credito">
+                <label for="cre">Credito</label>
+            </div>
+            <div class="divs-inputs">
+                <input type="radio" id="deb" name="tipo-targeta" value="cebito">
+                <label for="deb">Debito</label>
+            </div>
             
-            <label for="num-tarjeta">Nro Tarjeta:</label>
-            <input type="text" id="num_tarjeta" name="num_tarjeta" placeholder="1111-2222-3333-4444"><br>
+            <div class="divs-inputs">
+                <label for="nombre-tarjeta" class="inputs-label">Nombre en su Tarjeta: </label>
+                <input class="inputs" id="nombre-tarjeta" name="nombre-tarjeta" placeholder="Juan Pérez">
+            </div>
             
-            <label for="cvv">CVV: </label>
-            <input type="text" id="cvv" name="cvv" size="3" placeholder="111"><br>
+            <div class="divs-inputs">
+                <label for="num-tarjeta" class="inputs-label">Nro Tarjeta:</label>
+                <input class="inputs" id="num-tarjeta" name="num-tarjeta" placeholder="1111-2222-3333-4444">
+            </div>
             
-            <label for="f_vencimiento">Fecha de Vencimiento</label>
-            <input type="text" id="f_vencimiento" name="f_vencimiento" size="5" placeholder="dd/mm"><br>
+            <div class="divs-inputs">
+                <label for="cvv" class="inputs-label">CVV: </label>
+                <input class="inputs" id="cvv" name="cvv" size="3" placeholder="111">
+            </div>
             
-            <label for="mail">Mail: </label>
-            <input type="text" id="mail" name="mail" placeholder="Juan_Perez@gmail.com"><br>
+            <div class="divs-inputs">
+                <label for="f_vencimiento" class="inputs-label">Fecha de Vencimiento</label>
+                <input class="inputs" id="f_vencimiento" name="f_vencimiento" size="5" placeholder="dd/mm">
+            </div>
             
-            <input type="submit" id="confirmar" value="confirmar">
+            <div class="divs-inputs">
+                <label for="mail" class="inputs-label">Mail: </label>
+                <input class="inputs" id="mail" name="mail" placeholder="Juan_Perez@gmail.com">
+            </div>
+            
+            <div class="divs-inputs">
+                <input type="submit" id="confirmar" value="confirmar">
+            </div>
+            
         </form>
         
     </div>
 
-    <div style="display: block; float: right; width: 50%;">
+    <div id="div-der">
         <div class="partidos" id="ger" style="display: none;">
             <h3>Partidos de Alemania</h3>
             <div>Alemania vs Japón - 23 de Noviembre - 13hs hora local - Estadio Internacional Khalifa, Rayán</div><br>

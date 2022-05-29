@@ -1,0 +1,56 @@
+#div-izq {
+    display: block;
+    float: left;
+    height: 100vh;
+    width: 50%;
+}
+
+p {
+    margin: 0;
+}
+
+#formu {
+    display: inline-block;
+    margin-left: 20%;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+#confirmar {
+    margin: auto;
+}
+
+#div-der {
+    display: block;
+    float: right;
+    height: 100vh;
+    width: 50%;
+    margin: auto;
+}
+
+.divs-inputs {
+    /*position: absolute;*/
+    display: block;
+    margin-left: auto;
+}
+
+.inputs, .inputs-label {
+    display: inline-block;
+    margin: auto;
+}
+
+#deb, #cre {
+    display: inline;
+}
+
+input {
+    border: 1px solid black;
+}
+
+.correcto {
+    border: 2px solid green;
+}
+
+.incorrecto {
+    border: 2px solid red;
+}
