@@ -9,6 +9,7 @@
     <link href="css/generalstyles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/formulariostyles.css">
     <script src="jsformu.js"></script>
+    <script src="https://kit.fontawesome.com/a9de479e72.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
     <br>
     <div id="div-izq">
         <form action="" id="formu" name="formu" onsubmit="return enviar()">
-            <div>
+            <div class="divs-inputs"><!--cualquier cosa rara borrarle la clase a este div-->
                 <label for="seleccion">Seleccione un Pais: </label>
                 <select name="seleccion" id="seleccion"  onchange="mostrarPartidos()">
                     <!--desaparecer a saleccione cuando se seleecione alguna otra opcion-->
@@ -70,10 +71,14 @@
             <div class="divs-inputs">
                 <input type="radio" id="cre" name="tipo-targeta" value="credito">
                 <label for="cre">Credito</label>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
             </div>
             <div class="divs-inputs">
                 <input type="radio" id="deb" name="tipo-targeta" value="cebito">
                 <label for="deb">Debito</label>
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
             </div>
             
             <div class="divs-inputs">

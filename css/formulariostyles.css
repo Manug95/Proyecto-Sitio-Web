@@ -32,6 +32,8 @@ p {
     /*position: absolute;*/
     display: block;
     margin-left: auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .inputs, .inputs-label {
@@ -45,12 +47,4 @@ p {
 
 input {
     border: 1px solid black;
-}
-
-.correcto {
-    border: 2px solid green;
-}
-
-.incorrecto {
-    border: 2px solid red;
 }
