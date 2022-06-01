@@ -48,3 +48,8 @@ p {
 input {
     border: 1px solid black;
 }
+
+ul {
+    color: red;
+    text-transform: uppercase;
+}

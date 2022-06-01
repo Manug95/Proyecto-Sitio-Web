@@ -13,16 +13,31 @@ function mostrarPartidos(){
   }
   //---------------------------------------------------------------------------------------------------------------
   
+  var errores = [];
+
   function enviar(){
-    if(validar()){
-  
+    let cartel = document.getElementById("lista_errores");
+    cartel.innerHTML = "";
+
+    if(!validar()){
+      for(let i = 0; i < errores.length; i++){
+        let li = document.createElement("li");
+        li.innerHTML = errores[i];
+        cartel.appendChild(li);
+      }
+    }else{
+      let li = document.createElement("li");
+      let pais = document.getElementById("seleccion");
+      let mail = document.getElementById("mail");
+      li.innerHTML = "¡Entradas para Ver a La seleccion de " + obtenerNombrePais(pais.value) + " Compradas !</br>La Misma fue Enviada a Su eMail (" + mail.value + ")";
+      cartel.appendChild(li);
     }
   
     return false;
   }
   
   function validar(){
-    let errores = [];
+    errores = [];
   
     /* obtengo los inputs */
     let nombre_tarjeta = document.getElementById("nombre-tarjeta");
@@ -57,6 +72,12 @@ function mostrarPartidos(){
       if(nombre_tarjeta.value.length > 20){//comprueba que la camtidad de caracteres no sea mayor a 20
         errores.push("Nombre Tarjeta No Puede Exceder los 20 Caracteres");
         nombre_tarjeta.style.border = "2px solid red";
+      }else{
+        let = valNom = /^[a-zA-Z]'?([a-zA-Z]|\.| |-)+$/;
+        if(!valNom.test(nombre_tarjeta.value)){
+          errores.push("Nombre Invalido");
+          nombre_tarjeta.style.border = "2px solid red";
+        }
       }
     }
   
@@ -85,8 +106,8 @@ function mostrarPartidos(){
       errores.push("Campo CVV Vacio");
       cvv.style.border = "2px solid red";
     }else{
-      if(cvv.value.length > 3){//comprueba que la camtidad de numeros no sea mayor a 3
-        errores.push("El CVV No Puede Exceder los 3 Numeros");
+      if(cvv.value.length != 3){//comprueba que la camtidad de numeros no sea mayor a 3
+        errores.push("El CVV Debe Ser de 3 Numeros");
         cvv.style.border = "2px solid red";
         if(isNaN(cvv.value)){
           errores.push("Campo CVV Debe Ser Solo Numeros");
@@ -147,7 +168,7 @@ function validarFechaVencimiento(fecha){
         return "Campo Fecha Vencimiento Vacio";
     }
     if(fecha.length != 5){//que tenga 5 caracteres
-        return "Fecha Demasiado Larga";
+        return "Fecha de Vencimiento Incorrecta";
     }
 
     if(isNaN(fecha[0]) || ((fecha[0] > 1 || fecha[0] < 0))){//que sean numeros validos
@@ -167,4 +188,39 @@ function validarFechaVencimiento(fecha){
     }
 
     return true;
+}
+
+function obtenerNombrePais(pais){
+  switch(pais){
+    case "ger": return "Alemania";
+    case "ksa": return "Arabia Saudita";
+    case "arg": return "Argentina";
+    case "bel": return "Belgica";
+    case "bra": return "Brasil";
+    case "cam": return "Camerun";
+    case "can": return "Canadá";
+    case "kor": return "Corea Del Sur";
+    case "cro": return "Croacia";
+    case "den": return "Dinamarca";
+    case "ecu": return "Ecuador";
+    case "usa": return "Estados Unidos";
+    case "esp": return "España";
+    case "fra": return "Francia";
+    case "gha": return "Ghana";
+    case "eng": return "Inglaterra";
+    case "irn": return "Irán";
+    case "jpn": return "Japón";
+    case "mar": return "Marruecos";
+    case "mex": return "México";
+    case "ned": return "Paises Bajos";
+    case "pol": return "Polonia";
+    case "por": return "Portugal";
+    case "qat": return "Qatar";
+    case "sen": return "Senegal";
+    case "srb": return "Serbia";
+    case "sui": return "Suiza";
+    case "tun": return "Tunez";
+    case "uru": return "Uruguay";
+    default: return "Un Pais";
+  }
 }
