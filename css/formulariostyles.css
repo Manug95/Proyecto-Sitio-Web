@@ -41,7 +41,7 @@ p {
     margin: auto;
 }
 
-#deb, #cre {
+#master, #visa {
     display: inline;
 }
 
@@ -52,4 +52,8 @@ input {
 ul {
     color: red;
     text-transform: uppercase;
+}
+
+.partidos {
+    display: none;
 }

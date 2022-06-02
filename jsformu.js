@@ -86,18 +86,34 @@ function mostrarPartidos(){
       errores.push("Campo Numero Tarjeta Vacio");
       num_tarjeta.style.border = "2px solid red";
     }else{
-      if(num_tarjeta.value.length > 19){//comprueba que la camtidad de numeros no sea mayor a 19
-        errores.push("Numero Tarjeta No Puede Exceder los 19 Numeros");
+      if(num_tarjeta.value.length != 19 && num_tarjeta.value.length != 16){//comprueba que la camtidad de numeros no sea mayor a 19
+        errores.push("Numero Tarjeta Demasiado Corto o Largo");
         num_tarjeta.style.border = "2px solid red";
-        if(isNaN(num_tarjeta.value)){
+        /*if(isNaN(num_tarjeta.value)){
           errores.push("Campo Numero Tarjeta Debe Contener Solo Numeros");
           num_tarjeta.style.border = "2px solid red";
-        }
+        }*/
       }else{
-        if(isNaN(num_tarjeta.value)){
+        let valVisa = /^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/;
+        let valMaster = /^5[1-5]\d{2}-?\d{4}-?\d{4}-?\d{4}$/;
+        let tarjetaVisa = document.getElementById("visa");
+        let tarjetaMaster = document.getElementById("master");
+        
+        if(tarjetaVisa.checked){
+          if(!valVisa.test(num_tarjeta.value)){
+            errores.push("Número de Tarjeta Visa Incorrecto");
+          }
+        }
+        if(tarjetaMaster.checked){
+          if(!valMaster.test(num_tarjeta.value)){
+            errores.push("Número de Tarjeta Mastercard Incorrecto");
+          }
+        }
+        
+        /*if(isNaN(num_tarjeta.value)){
           errores.push("Campo Numero Tarjeta Debe Contener Solo Numeros");
           num_tarjeta.style.border = "2px solid red";
-        }
+        }*/
       }
     }
   
