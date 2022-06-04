@@ -23,6 +23,11 @@ h1, h2 {
     height: 200px;
 }
 
+.ciudad {
+    display: block;
+    height: 200px;
+}
+
 /*estilos del boton toTop*/
 #toTop {
     display: none;

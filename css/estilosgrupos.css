@@ -19,11 +19,13 @@ arreglar el p del texto de descripcion
     /*background-color: rgb(170, 31, 61);*/
     background-color: rgb(155, 60, 80);;
     color: rgb(235, 217, 217);
+    margin-top: 10px;
 }
 
 caption {
     color: black;
     font-weight: bold;
+    font-size: 20px;
 }
 
 /* descripciones es la clase del p de las descripciones de los paises */
@@ -50,9 +52,19 @@ caption {
     vertical-align: middle;
 }
 
-table a {
+table a, table a:visited {
     text-decoration: none;
     color: rgb(235, 217, 217);
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.p_repes {
+    text-align: center;
 }
   
   #toTop:hover {

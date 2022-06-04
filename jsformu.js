@@ -20,6 +20,7 @@ function mostrarPartidos(){
     cartel.innerHTML = "";
 
     if(!validar()){
+      cartel.classList.remove("comprada");
       for(let i = 0; i < errores.length; i++){
         let li = document.createElement("li");
         li.innerHTML = errores[i];
@@ -31,6 +32,7 @@ function mostrarPartidos(){
       let mail = document.getElementById("mail");
       li.innerHTML = "¡Entradas para Ver a La seleccion de " + obtenerNombrePais(pais.value) + " Compradas !</br>La Misma fue Enviada a Su eMail (" + mail.value + ")";
       cartel.appendChild(li);
+      cartel.classList.add("comprada");
     }
   
     return false;
