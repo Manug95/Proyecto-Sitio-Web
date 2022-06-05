@@ -28,6 +28,13 @@ caption {
     font-size: 20px;
 }
 
+h3 {
+    font-size: 160%;
+    text-decoration-line:underline;
+    text-decoration-style: solid;
+    text-align: center;
+}
+
 /* descripciones es la clase del p de las descripciones de los paises */
 .descripciones {
     float: none;
@@ -50,6 +57,8 @@ caption {
 
 .banderita {
     vertical-align: middle;
+    position: relative;
+    bottom: 2px;
 }
 
 table a, table a:visited {
