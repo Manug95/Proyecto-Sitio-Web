@@ -17,6 +17,7 @@ function mostrarPartidos(){
 
   function enviar(){
     let cartel = document.getElementById("lista_errores");
+    let label_seleccion = document.getElementById("label-seleccion");
     cartel.innerHTML = "";
 
     if(!validar()){
@@ -33,6 +34,7 @@ function mostrarPartidos(){
       li.innerHTML = "¡Entradas para Ver a La seleccion de " + obtenerNombrePais(pais.value) + " Compradas !</br>La Misma fue Enviada a Su eMail (" + mail.value + ")";
       cartel.appendChild(li);
       cartel.classList.add("comprada");
+      label_seleccion.classList.remove("subrayado");
     }
   
     return false;
@@ -57,28 +59,47 @@ function mostrarPartidos(){
     let fecha_vencimiento = document.getElementById("f_vencimiento");
     //---------------------------------------------------------------------------------------------------
 
-    for(let i = 0; i < bordes.length; i++){
+    /*for(let i = 0; i < bordes.length; i++){
+      if(bordes[i].id == "nombre-tarjeta"){
+        nombre_tarjeta.classList.remove("error");
+      }else{
         bordes[i].style.border = "1px solid black";
-    }
+      }
+        
+    }*/
+
+    nombre_tarjeta.classList.remove("error");
+    num_tarjeta.classList.remove("error");
+    cvv.classList.remove("error");
+    fecha_vencimiento.classList.remove("error");
+    mail.classList.remove("error");
+    
   
     /* validacion del select ------------------------------------------------- */
+    let label_seleccion = document.getElementById("label-seleccion");
     if(seleccion.value == ""){
         errores.push("Seleccione un Pais");
+        label_seleccion.classList.add("subrayado");
+    }else{
+      label_seleccion.classList.remove("subrayado");
     }
 
     /* validacion del input nombre tarjeta ------------------------------------------------- */
     if(nombre_tarjeta.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Nombre Tarjeta Vacio");
-      nombre_tarjeta.style.border = "2px solid red";
+      nombre_tarjeta.classList.add("error");
+      //nombre_tarjeta.style.border = "2px solid red";
     }else{
       if(nombre_tarjeta.value.length > 20){//comprueba que la camtidad de caracteres no sea mayor a 20
         errores.push("Nombre Tarjeta No Puede Exceder los 20 Caracteres");
-        nombre_tarjeta.style.border = "2px solid red";
+        nombre_tarjeta.classList.add("error");
+        //nombre_tarjeta.style.border = "2px solid red";
       }else{
         let = valNom = /^[a-zA-Z]'?([a-zA-Z]|\.| |-)+$/;
         if(!valNom.test(nombre_tarjeta.value)){
           errores.push("Nombre Invalido");
-          nombre_tarjeta.style.border = "2px solid red";
+          nombre_tarjeta.classList.add("error");
+          //nombre_tarjeta.style.border = "2px solid red";
         }
       }
     }
@@ -86,11 +107,13 @@ function mostrarPartidos(){
     /* validacion del input numero de la tarjeta ------------------------------------------------- */
     if(num_tarjeta.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Numero Tarjeta Vacio");
-      num_tarjeta.style.border = "2px solid red";
+      num_tarjeta.classList.add("error");
+      //num_tarjeta.style.border = "2px solid red";
     }else{
       if(num_tarjeta.value.length != 19 && num_tarjeta.value.length != 16){//comprueba que la camtidad de numeros no sea mayor a 19
         errores.push("Numero Tarjeta Demasiado Corto o Largo");
-        num_tarjeta.style.border = "2px solid red";
+        num_tarjeta.classList.add("error");
+        //num_tarjeta.style.border = "2px solid red";
         /*if(isNaN(num_tarjeta.value)){
           errores.push("Campo Numero Tarjeta Debe Contener Solo Numeros");
           num_tarjeta.style.border = "2px solid red";
@@ -104,11 +127,13 @@ function mostrarPartidos(){
         if(tarjetaVisa.checked){
           if(!valVisa.test(num_tarjeta.value)){
             errores.push("Número de Tarjeta Visa Incorrecto");
+            num_tarjeta.classList.add("error");
           }
         }
         if(tarjetaMaster.checked){
           if(!valMaster.test(num_tarjeta.value)){
             errores.push("Número de Tarjeta Mastercard Incorrecto");
+            num_tarjeta.classList.add("error");
           }
         }
         
@@ -122,19 +147,23 @@ function mostrarPartidos(){
     /* validacion del cvv ------------------------------------------------- */
     if(cvv.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo CVV Vacio");
-      cvv.style.border = "2px solid red";
+      cvv.classList.add("error");
+      //cvv.style.border = "2px solid red";
     }else{
       if(cvv.value.length != 3){//comprueba que la camtidad de numeros no sea mayor a 3
         errores.push("El CVV Debe Ser de 3 Numeros");
-        cvv.style.border = "2px solid red";
+        cvv.classList.add("error");
+        //cvv.style.border = "2px solid red";
         if(isNaN(cvv.value)){
           errores.push("Campo CVV Debe Ser Solo Numeros");
-          cvv.style.border = "2px solid red";
+          cvv.classList.add("error");
+          //cvv.style.border = "2px solid red";
         }
       }else{
         if(isNaN(cvv.value)){
           errores.push("Campo CVV Debe Ser Solo Numeros");
-          cvv.style.border = "2px solid red";
+          cvv.classList.add("error");
+          //cvv.style.border = "2px solid red";
         }
       }
     }
@@ -143,7 +172,8 @@ function mostrarPartidos(){
     let val_fecha = validarFechaVencimiento(fecha_vencimiento.value);
     if(typeof val_fecha == "string"){
         errores.push(val_fecha);
-        fecha_vencimiento.style.border = "2px solid red";
+        fecha_vencimiento.classList.add("error");
+        //fecha_vencimiento.style.border = "2px solid red";
     }
 
     /* validacion del input del mail ------------------------------------------------- */
@@ -151,16 +181,19 @@ function mostrarPartidos(){
   
     if(mail.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Mail Vacio");
-      mail.style.border = "2px solid red";
+      mail.classList.add("error");
+      //mail.style.border = "2px solid red";
     }else{
       if(!expresion_regular.test(mail.value)){//comprueba que sea un texto tipo email valido
         errores.push("Mail Invalido");
-        mail.style.border = "2px solid red";
+        mail.classList.add("error");
+        //mail.style.border = "2px solid red";
       }
     }
   
     /* validacion de los inputs radio de tipo de tarjeta ------------------------------------------------- */
     let marcada = false;
+    let medio_pago = document.getElementById("medio-pago");
   
     for(let i = 0; i < tipo_tarjeta.length; i++){
       marcada |= tipo_tarjeta[i].checked;
@@ -168,7 +201,9 @@ function mostrarPartidos(){
   
     if(!marcada){
       errores.push("Debe Marcar un Tipo de Tarjeta");
-      tipo_tarjeta.border = "2px solid red";
+      medio_pago.classList.add("subrayado");
+    }else{
+      medio_pago.classList.remove("subrayado");
     }
 
     for(let i = 0; i < errores.length; i++){
