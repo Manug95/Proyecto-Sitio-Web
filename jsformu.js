@@ -59,15 +59,6 @@ function mostrarPartidos(){
     let fecha_vencimiento = document.getElementById("f_vencimiento");
     //---------------------------------------------------------------------------------------------------
 
-    /*for(let i = 0; i < bordes.length; i++){
-      if(bordes[i].id == "nombre-tarjeta"){
-        nombre_tarjeta.classList.remove("error");
-      }else{
-        bordes[i].style.border = "1px solid black";
-      }
-        
-    }*/
-
     nombre_tarjeta.classList.remove("error");
     num_tarjeta.classList.remove("error");
     cvv.classList.remove("error");
@@ -88,18 +79,15 @@ function mostrarPartidos(){
     if(nombre_tarjeta.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Nombre Tarjeta Vacio");
       nombre_tarjeta.classList.add("error");
-      //nombre_tarjeta.style.border = "2px solid red";
     }else{
       if(nombre_tarjeta.value.length > 20){//comprueba que la camtidad de caracteres no sea mayor a 20
         errores.push("Nombre Tarjeta No Puede Exceder los 20 Caracteres");
         nombre_tarjeta.classList.add("error");
-        //nombre_tarjeta.style.border = "2px solid red";
       }else{
         let = valNom = /^[a-zA-Z]'?([a-zA-Z]|\.| |-)+$/;
         if(!valNom.test(nombre_tarjeta.value)){
           errores.push("Nombre Invalido");
           nombre_tarjeta.classList.add("error");
-          //nombre_tarjeta.style.border = "2px solid red";
         }
       }
     }
@@ -108,16 +96,10 @@ function mostrarPartidos(){
     if(num_tarjeta.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Numero Tarjeta Vacio");
       num_tarjeta.classList.add("error");
-      //num_tarjeta.style.border = "2px solid red";
     }else{
       if(num_tarjeta.value.length != 19 && num_tarjeta.value.length != 16){//comprueba que la camtidad de numeros no sea mayor a 19
         errores.push("Numero Tarjeta Demasiado Corto o Largo");
         num_tarjeta.classList.add("error");
-        //num_tarjeta.style.border = "2px solid red";
-        /*if(isNaN(num_tarjeta.value)){
-          errores.push("Campo Numero Tarjeta Debe Contener Solo Numeros");
-          num_tarjeta.style.border = "2px solid red";
-        }*/
       }else{
         let valVisa = /^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/;
         let valMaster = /^5[1-5]\d{2}-?\d{4}-?\d{4}-?\d{4}$/;
@@ -136,11 +118,6 @@ function mostrarPartidos(){
             num_tarjeta.classList.add("error");
           }
         }
-        
-        /*if(isNaN(num_tarjeta.value)){
-          errores.push("Campo Numero Tarjeta Debe Contener Solo Numeros");
-          num_tarjeta.style.border = "2px solid red";
-        }*/
       }
     }
   
@@ -148,22 +125,18 @@ function mostrarPartidos(){
     if(cvv.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo CVV Vacio");
       cvv.classList.add("error");
-      //cvv.style.border = "2px solid red";
     }else{
       if(cvv.value.length != 3){//comprueba que la camtidad de numeros no sea mayor a 3
         errores.push("El CVV Debe Ser de 3 Numeros");
         cvv.classList.add("error");
-        //cvv.style.border = "2px solid red";
         if(isNaN(cvv.value)){
           errores.push("Campo CVV Debe Ser Solo Numeros");
           cvv.classList.add("error");
-          //cvv.style.border = "2px solid red";
         }
       }else{
         if(isNaN(cvv.value)){
           errores.push("Campo CVV Debe Ser Solo Numeros");
           cvv.classList.add("error");
-          //cvv.style.border = "2px solid red";
         }
       }
     }
@@ -173,7 +146,6 @@ function mostrarPartidos(){
     if(typeof val_fecha == "string"){
         errores.push(val_fecha);
         fecha_vencimiento.classList.add("error");
-        //fecha_vencimiento.style.border = "2px solid red";
     }
 
     /* validacion del input del mail ------------------------------------------------- */
@@ -182,12 +154,10 @@ function mostrarPartidos(){
     if(mail.value.trim() == ""){//comprueba si el campo esta vacio
       errores.push("Campo Mail Vacio");
       mail.classList.add("error");
-      //mail.style.border = "2px solid red";
     }else{
       if(!expresion_regular.test(mail.value)){//comprueba que sea un texto tipo email valido
         errores.push("Mail Invalido");
         mail.classList.add("error");
-        //mail.style.border = "2px solid red";
       }
     }
   

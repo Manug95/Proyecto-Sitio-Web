@@ -41,6 +41,7 @@ p {
 .partidos div {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
 }
 
