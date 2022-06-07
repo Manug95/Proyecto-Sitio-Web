@@ -193,21 +193,44 @@ function validarFechaVencimiento(fecha){
     if(fecha.length != 5){//que tenga 5 caracteres
         return "Fecha de Vencimiento Incorrecta";
     }
-
+    /*
     if(isNaN(fecha[0]) || ((fecha[0] > 1 || fecha[0] < 0))){//que sean numeros validos
         return "Fecha Incorrecta";
+    }*/
+    if(fecha[0] != "0" && fecha[0] != "1"){
+      console.log("el primero");
+      return "Fecha Incorrecta";
     }
-    if(isNaN(fecha[1]) || (fecha[1] > 2 || fecha[1] < 0)){//que sean numeros validos
+
+    /*if(isNaN(fecha[1]) || (fecha[1] > 2 || fecha[1] < 0)){//que sean numeros validos
         return "Fecha Incorrecta";
+    }*/
+    if(fecha[0] == 0){
+      if(isNaN(fecha[1]) || !(fecha[1] >= 1 && fecha[1] <= 9)){
+        console.log("el segundo, el if");
+        return "Fecha Incorrecta";
+      }
+    }else{
+      if(isNaN(fecha[1]) || (fecha[1] != 0 && fecha[1] != 1 && fecha[1] != 2)){
+        console.log("el segundo, el else");
+        return "Fecha Incorrecta";
+      }
     }
+
     if(fecha[2] != '/'){//que el 3ro sea una barra
+        console.log("el tercero");
         return "Formato Incorrecto";
     }
-    if(isNaN(fecha[3]) || (fecha[3] > 3 || fecha[3] < 2)){//que sean numeros validos
+
+    /*if(isNaN(fecha[3]) || (fecha[3] > 3 || fecha[3] < 2)){//que sean numeros validos
         return "Fecha Incorrecta";
     }
     if(isNaN(fecha[4]) || (fecha[4] > 9 || fecha[4] < 0)){//que sean numeros validos
         return "Fecha Incorrecta";
+    }*/
+    if(isNaN(fecha[3]) || isNaN(fecha[4])){
+      console.log("el cuarto o quinto");
+      return "Fecha Incorrecta";
     }
 
     return true;
