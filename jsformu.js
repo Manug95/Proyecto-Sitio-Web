@@ -1,7 +1,12 @@
 /* js del select */
-function mostrarPartidos(){
+function mostrarPartidos(x){
     let seleccion = document.getElementById("seleccion");
     let partidos = document.getElementsByClassName("partidos");
+
+    if(x == 0){//limpia el cartel de la compra
+      let cartel = document.getElementById("lista_errores");
+      cartel.innerHTML = "";
+    }
   
     for(let i = 0; i < partidos.length; i++){
       if(partidos[i].id == seleccion.value){
@@ -43,7 +48,7 @@ function mostrarPartidos(){
       document.getElementById("f_vencimiento").value = "";
       document.getElementById("visa").checked = false;
       document.getElementById("master").checked = false;
-      
+      mostrarPartidos(1);
       //label_seleccion.classList.remove("subrayado");
     }
   
@@ -262,6 +267,7 @@ function obtenerNombrePais(pais){
     case "usa": return "Estados Unidos";
     case "esp": return "España";
     case "fra": return "Francia";
+    case "wal": return "Gales";
     case "gha": return "Ghana";
     case "eng": return "Inglaterra";
     case "irn": return "Irán";

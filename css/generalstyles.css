@@ -2,7 +2,8 @@
 /* comun a todas las paginas */
 body {
     /*background-color: aquamarine;*/
-    background-color: rgb(161, 165, 212);
+    /*background-color: rgb(161, 165, 212);*/
+    background-color: lightblue;
     margin: 0;
     padding: 0;
 }
