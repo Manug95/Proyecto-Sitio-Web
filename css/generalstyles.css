@@ -1,18 +1,10 @@
 
 /* comun a todas las paginas */
 body {
-    /*background-color: aquamarine;*/
-    /*background-color: rgb(161, 165, 212);*/
     background-color: lightblue;
     margin: 0;
     padding: 0;
 }
-
-/*header {
-    background-image: url(../img/mascota.png);
-    height: 675px;
-    padding: 0;
-}*/
 
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;

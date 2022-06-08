@@ -7,14 +7,13 @@
 
 .menu a {
     float: left;
-    /*padding: 12px;*/ /* separacion del texto con el borde interior del elemento */
     padding-top: 12px;
     padding-bottom: 12px;
     color: black;
     font-weight: bolder;
-    text-decoration: none; /* con "none" le saco el subrayado */
+    text-decoration: none;
     font-size: 20px;
-    /*width: 31.55%;*/ /* lo que ocupa de ancho en la pantalla */
+    /*width: 31.55%;*/
     width: 33.33%;
     text-align: center;
     text-transform: uppercase;

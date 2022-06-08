@@ -123,13 +123,13 @@ function mostrarPartidos(x){
         
         if(tarjetaVisa.checked){
           if(!valVisa.test(num_tarjeta.value)){
-            errores.push("Número de Tarjeta Visa Incorrecto");
+            errores.push("Número de Tarjeta Visa Incorrecto, El Primer Numero Debe Ser un 4");
             num_tarjeta.classList.add("error");
           }
         }
         if(tarjetaMaster.checked){
           if(!valMaster.test(num_tarjeta.value)){
-            errores.push("Número de Tarjeta Mastercard Incorrecto");
+            errores.push("Número de Tarjeta Mastercard Incorrecto, Los Primeros 2 Numeros Deben Ser del 51 al 55");
             num_tarjeta.classList.add("error");
           }
         }
@@ -191,11 +191,10 @@ function mostrarPartidos(x){
       medio_pago.classList.remove("subrayado");
     }
 
-    for(let i = 0; i < errores.length; i++){
+    /*for(let i = 0; i < errores.length; i++){
         console.log(errores[i]);
     }
-  
-    console.log(errores.length);
+    console.log(errores.length);*/
   
     return errores.length == 0;
   }/* fin de validar() */
@@ -208,18 +207,12 @@ function validarFechaVencimiento(fecha){
     if(fecha.length != 5){//que tenga 5 caracteres
         return "Fecha de Vencimiento Incorrecta";
     }
-    /*
-    if(isNaN(fecha[0]) || ((fecha[0] > 1 || fecha[0] < 0))){//que sean numeros validos
-        return "Fecha Incorrecta";
-    }*/
+
     if(fecha[0] != "0" && fecha[0] != "1"){
       console.log("el primero");
       return "Fecha Incorrecta";
     }
 
-    /*if(isNaN(fecha[1]) || (fecha[1] > 2 || fecha[1] < 0)){//que sean numeros validos
-        return "Fecha Incorrecta";
-    }*/
     if(fecha[0] == 0){
       if(isNaN(fecha[1]) || !(fecha[1] >= 1 && fecha[1] <= 9)){
         console.log("el segundo, el if");
@@ -237,12 +230,6 @@ function validarFechaVencimiento(fecha){
         return "Formato Incorrecto";
     }
 
-    /*if(isNaN(fecha[3]) || (fecha[3] > 3 || fecha[3] < 2)){//que sean numeros validos
-        return "Fecha Incorrecta";
-    }
-    if(isNaN(fecha[4]) || (fecha[4] > 9 || fecha[4] < 0)){//que sean numeros validos
-        return "Fecha Incorrecta";
-    }*/
     if(isNaN(fecha[3]) || isNaN(fecha[4])){
       console.log("el cuarto o quinto");
       return "Fecha Incorrecta";
