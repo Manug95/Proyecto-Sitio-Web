@@ -1,10 +1,17 @@
 
 /* comun a todas las paginas */
 body {
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
+    background-color: rgb(161, 165, 212);
     margin: 0;
     padding: 0;
 }
+
+/*header {
+    background-image: url(../img/mascota.png);
+    height: 675px;
+    padding: 0;
+}*/
 
 h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
@@ -101,4 +108,9 @@ button a {
     padding: 15px;
     border-radius: 10px;
     /*font-size: 18px;*/
-  }
+}
+
+#toTop:hover {
+    /*background-color: #555;*/
+    background-color: rgb(119, 20, 41);
+}

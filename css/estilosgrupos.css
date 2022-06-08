@@ -17,7 +17,8 @@ arreglar el p del texto de descripcion
     float: left;
     width: 49.7%;
     /*background-color: rgb(170, 31, 61);*/
-    background-color: rgb(155, 60, 80);;
+    /*background-color: rgb(155, 60, 80);*/
+    background-color: rgb(36, 47, 155);
     color: rgb(235, 217, 217);
     margin-top: 10px;
 }
@@ -70,12 +71,4 @@ table a, table a:visited {
 a:visited {
     text-decoration: none;
     color: black;
-}
-
-.p_repes {
-    text-align: center;
-}
-  
-#toTop:hover {
-    background-color: #555;
 }

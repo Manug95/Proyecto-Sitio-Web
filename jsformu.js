@@ -34,7 +34,17 @@ function mostrarPartidos(){
       li.innerHTML = "¡Entradas para Ver a La seleccion de " + obtenerNombrePais(pais.value) + " Compradas !</br>La Misma fue Enviada a Su eMail (" + mail.value + ")";
       cartel.appendChild(li);
       cartel.classList.add("comprada");
-      label_seleccion.classList.remove("subrayado");
+      //limpio el formulario
+      pais.value = "";
+      mail.value = "";
+      document.getElementById("nombre-tarjeta").value = "";
+      document.getElementById("num-tarjeta").value = "";
+      document.getElementById("cvv").value = "";
+      document.getElementById("f_vencimiento").value = "";
+      document.getElementById("visa").checked = false;
+      document.getElementById("master").checked = false;
+      
+      //label_seleccion.classList.remove("subrayado");
     }
   
     return false;
